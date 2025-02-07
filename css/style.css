@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  font-family: "JetBrains Mono";
+  font-weight: medium;
+  background-color: #2e3440;  
+}
+
+#Home {
+  margin-top: 200px;
+  margin-bottom: 80px;
+  padding: 40px 0;
+	height: 15%;
+}
+
+header {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topleft {
+	font-size: 24px;
+  display: flex;
+  position: absolute;
+  top: 20px;
+  padding-right: 20px;
+  padding-left: 20%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.topright {
+  font-size: 18px;
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  padding-right: 20%;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 32px;
+}
+
+a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.topleft samp.decoration {
+	color: #81a1c1;
+}
+
+.topleft samp.name {
+	color: #eceff4;
+}
+
+.topright a {
+  color: #d8dee9;
+  transition: color 0.3s ease;
+}
+
+.topright a:hover {
+  color: #88c0d0;
+  text-shadow: 0 0 4px;
+  transition: color 0.3s ease;
+}
+
+.topright a.active {
+  color: #88c0d0; /* Color for the active state */
+}
+
+main {
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+  background-color: #2e3440;  
+}
+
+.title {
+	justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+	color: #eceff4;  
+	text-shadow: 0 0 30px;
+	font-size: 24px;
+	margin-bottom: 50px;
+}
+
+.splash {
+  display: flex;
+	position: relative;
+  justify-content: center; /* Distributes space evenly between divs */
+  width: 100%;
+  height: 100%;
+	gap: 40px;
+}
+
+.splash-left {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	gap: 10px;
+  width: 350px; /* Adjust width as needed */
+  height: 450px; /* Adjust height as needed */
+  background-color: #292e39; /* Example background color */
+  border-radius: 80px 0 80px 0; /* Top-left and top-right corners rounded */
+	border: 3px solid #d8dee9;
+	box-shadow: 0 0 3px #eceff4;
+}
+
+.splash-left .center {
+  display: flex;
+  flex-direction: column;  /* Centers the content horizontally */
+  align-items: center;  /* Centers the content vertically */
+  width: 100%;  /* Adjust width as needed */
+	margin-bottom: 20px;
+}
+
+.profile-picture {
+  margin-top: 20px;
+	margin-bottom: 20px;
+  border-radius: 50%;
+	border: 2px solid #88c0d0;
+  width: 100px;
+  height: 100px;
+}
+
+.splash-left samp.name {
+	font-size: 28px;
+	margin-bottom: 5px;
+	color: #81a1c1;
+}
+
+.splash-left samp.description {
+	font-size: 18px;
+	color: #b48ead;
+	text-align: center;
+}
+
+.splash-left samp {
+  font-size: 18px; /* Adjusts text size */
+  line-height: 1.2; /* Ensures proper text alignment */
+}
+
+.splash-left svg {
+  width: 24px;
+  height: 24px;
+  display: block; /* Ensures the image behaves like a block element */
+}
+
+.splash-left .email,
+.splash-left .location,
+.splash-left .work,
+.splash-left .github {
+  display: flex; /* Flexbox ensures items are aligned on the same line */
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 8px; /* Adds space between the icon and text */
+  width: 100%; /* Optional: ensures the container takes full width */
+	color: #eceff4;
+	margin-left: 25px;
+	margin-bottom: 8px;
+	line-height: 1.25rem;
+	font-size: 18px;
+}
+
+p {
+	margin: 0;
+}
+
+.splash-middle {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	margin: 0;
+	padding: 0;
+	gap: 10px;
+	font-size: 20px;
+}
+
+.splash-middle .python {
+	color: #ffffff;
+}
+
+span.class {
+	color: #5e81ac !important;
+}
+
+span.class-name {
+	color: #81a1c1;
+}
+
+span.definition {
+	color: #8fbcbb;
+}
+
+span.function {
+	color: #88c0d0;
+}
+
+span.dots {
+	color: #88c0d0;
+}
+
+span.variable {
+	color: #eceff4;
+}
+
+span.return {
+	color: #8fbcbb;
+}
+
+span.output {
+	color: #a3be8c;
+}
+
+.splash-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Changed from center */
+  gap: 15px; /* Increased gap */
+  width: 200px;
+  height: 250px; /* Better for dynamic content */
+  background-color: #242933;
+  border-radius: 30px;
+	box-shadow: 0 0 10px #242933;
+  padding: 20px; /* Added padding instead of margins */
+  margin-top: 80px; /* Reduced from 120px */
+}
+
+.splash-right samp {
+  color: #eceff4;
+  font-size: 18px;
+  width: 100%; /* Full width for alignment */
+}
+
+.splash-right b {
+  color: #88c0d0; /* Added accent color */
+  font-size: 28px; /* Larger for emphasis */
+  display: inline-block; /* Ensure line break */
+  margin-bottom: 5px;
+}
+
+.splash-right .language,
+.splash-right .tools,
+.splash-right .experience {
+  display: flex;
+  flex-direction: row; /* Stack number and text */
+  align-items: center;
+	gap: 10px;
+  width: 100%;
+  padding: 20 0px; /* Consistent padding */
+  margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#About {
+	background-image: url('../backgrounds/mono-inspiration.png');
+	background-size: cover;
+	height: 1500px;
+}
+
+.aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	position: absolute;
+	top: 80%;
+  gap: 10px;
+  padding: 10px;
+  width: 170px;
+  font-size: 24px;
+  color: #eceff4;
+  background-color: #242933;
+  border-radius: 25px 0 25px 0;
+	border: 2px solid #5e81ac;
+	box-shadow: 0 0 10px #5e81ac;
+  margin-left: 450px; /* NEW: Adds space from left wall */
+}
+
+.info {
+  display: flex;
+	flex-direction: column;
+  align-items: left;
+	position: absolute;
+	top: 90%;
+  gap: 10px;
+  padding: 30px;
+  width: 850px;
+  font-size: 18px;
+  color: #eceff4;
+  background-color: #242933;
+  border-radius: 15px;
+  margin-left: 350px;
+	box-shadow: 0 0 10px #242933;
+}
+
+span.cyan {
+	color: #88c0d0;
+}
+
+span.green {
+	color: #a3be8c;
+}
+
+span.blue {
+	color: #5e81ac;
+}
+
+span.pink {
+	color: #b48ead;
+}
+
+span.red {
+	color: #bf616a;
+}
+
+span.orange {
+	color: #d08770;
+}
+
+span.yellow {
+	color: #ebcb8b;
+}
+
+
+.wheel {
+  /* Keep your existing positioning */
+  position: absolute;
+  right: 10%;
+  top: 135%;
+  transform: translateY(-50%);
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #242933;
+	box-shadow: 0 0 10px #242933;
+}
+
+.wheel .skills {
+  /* Keep text styling */
+  font-size: 28px;
+  text-decoration: underline;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  
+  /* Adjust spacing from logos */
+  margin-bottom: 40px; /* Reduced from default */
+}
+
+.wheel .desc {
+  /* Keep text styling */
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  
+  /* Fix spacing */
+  margin-top: 10px; /* Space above description */
+  padding: 20px; /* Reduced from 160px */
+}
+
+.languages img {
+  width: 70px;
+  height: 70px;
+  /* Add spacing between logos */
+  margin: 10px;
+}
