@@ -1,48 +1,35 @@
 body {
   font-family: "JetBrains Mono";
   font-weight: medium;
-  background-color: #2e3440;  
+	background-image:url('../assets/backgrounds/Galaxy.jpg');
+	background-size: fit;
+	background-position: center;
 }
 
 header {
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  top: 0;
-  left: 0;
+	width: 100%;
 }
 
-nav {
+.topnav {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.topleft {
-	font-size: 24px;
-  display: flex;
-  position: absolute;
-  top: 20px;
-  padding-right: 20px;
-  padding-left: 20%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.topright {
-  font-size: 18px;
-  position: absolute;
-  top: 20px;
-  right: 16px;
-  padding-right: 20%;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20%;
+  height: 70px;
+  background-color: #292e39;
 }
 
 a {
 	color: #ffffff;
 	text-decoration: none;
+}
+
+.topleft {
+	font-size: 24px;
+}
+
+.topright {
+	font-size: 18px;
 }
 
 .topleft samp.decoration {
@@ -77,6 +64,7 @@ a {
   padding: 20px;
   padding-top: 50px;
   color: #81a1c1;
+	text-shadow: 0 0 10px #88c0d0;
 }
 
 .timeline {
@@ -95,6 +83,7 @@ a {
   border: 2px solid #81a1c1;
   border-radius: 1em;
   padding: 1.5em;
+	background-color: #292e39;
 }
 
 .checkpoint div h2 {
@@ -208,6 +197,9 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+	.topnav {
+		padding: 0 10%;
+	}
   .topleft {
     padding-left: 5%;
     font-size: 20px;
@@ -219,20 +211,23 @@ a {
   }
 }
 
+@media screen and (max-width: 560px) {
+	.topnav {
+		padding: 0 5%;
+	}
+}
+
 @media screen and (max-width: 480px) {
   .topleft, .topright {
     position: relative;
-    width: 100%;
-    text-align: center;
     padding: 10px 5%;
     top: 0;
   }
 
   .topright {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 15px;
-    flex-wrap: wrap;
   }
 }

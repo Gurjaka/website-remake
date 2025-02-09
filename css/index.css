@@ -7,7 +7,7 @@ html {
 body {
   font-family: "JetBrains Mono";
   font-weight: medium;
-  background-color: #2e3440;  
+  background-color: #2e3440;
 }
 
 #Home {
@@ -18,44 +18,29 @@ body {
 }
 
 header {
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  top: 0;
-  left: 0;
+	width: 100%;
 }
 
-nav {
+.topnav {
   display: flex;
-  flex-wrap: wrap;
-}
-
-.topleft {
-	font-size: 24px;
-  display: flex;
-  position: absolute;
-  top: 20px;
-  padding-right: 20px;
-  padding-left: 20%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.topright {
-  font-size: 18px;
-  position: absolute;
-  top: 20px;
-  right: 16px;
-  padding-right: 20%;
-  padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20%;
+  height: 70px;
+  background-color: #292e39;
 }
 
 a {
 	color: #ffffff;
 	text-decoration: none;
+}
+
+.topleft {
+	font-size: 24px;
+}
+
+.topright {
+	font-size: 18px;
 }
 
 .topleft samp.decoration {
@@ -81,12 +66,12 @@ a {
   color: #88c0d0; /* Color for the active state */
 }
 
-main {
-	height: 60vh;
-	display: flex;
-	flex-direction: column;
-  background-color: #2e3440;  
-}
+/*main {*/
+/*	height: 60vh;*/
+/*	display: flex;*/
+/*	flex-direction: column;*/
+/*  background-color: #2e3440;  */
+/*}*/
 
 .title {
 	justify-content: center;
@@ -103,6 +88,7 @@ main {
   display: flex;
 	position: relative;
   justify-content: center; /* Distributes space evenly between divs */
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
 	gap: 40px;
@@ -173,6 +159,7 @@ main {
 	margin-bottom: 8px;
 	line-height: 1.25rem;
 	font-size: 18px;
+  transition: all 0.3s ease;
 }
 
 .splash-left .location,
@@ -182,8 +169,10 @@ main {
 
 .splash-left .email:hover,
 .splash-left .github:hover {
-  color: #81a1c1; /* Change color on hover */
-  text-shadow: 0 0 15px #81a1c1, 0 0 30px #81a1c1; /* Glow effect */
+  color: #81a1c1;
+	text-shadow: 0 0 30px #81a1c1, 0 0 45px #81a1c1;
+  transform: translateX(5px);
+	transition: all 0.3s ease;
 }
 
 .splash-left .email,
@@ -200,7 +189,7 @@ p {
 	flex-direction: column;
 	align-items: left;
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	gap: 10px;
 	font-size: 20px;
 }
@@ -284,16 +273,20 @@ span.output {
 #About {
 	background-image: url('../assets/backgrounds/mono-inspiration.png');
 	background-size: cover;
-	height: 1500px;
+	background-position: center;
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	flex-wrap: wrap;
 }
 
 .aboutme {
   display: flex;
-  align-items: center;
+	align-items: center;
   justify-content: center;
-	position: absolute;
-	top: 80%;
-  gap: 10px;
+	transform: translateX(-350%);
+	margin: 30px;
   padding: 10px;
   width: 170px;
   font-size: 24px;
@@ -302,25 +295,31 @@ span.output {
   border-radius: 25px 0 25px 0;
 	border: 2px solid #5e81ac;
 	box-shadow: 0 0 10px #5e81ac;
-  margin-left: 450px; /* NEW: Adds space from left wall */
 	text-shadow: 0 0 10px #eceff4;
+}
+
+.box {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 300px;
+	height: 100vh;
 }
 
 .info {
   display: flex;
 	flex-direction: column;
   align-items: left;
-	position: absolute;
-	top: 90%;
-  gap: 10px;
   padding: 30px;
   width: 850px;
+	height: 620px;
   font-size: 18px;
   color: #eceff4;
   background-color: #242933;
   border-radius: 15px;
-  margin-left: 350px;
 	box-shadow: 0 0 10px #242933;
+	padding: 20px 20px 20px 20px;
 }
 
 p {
@@ -357,10 +356,8 @@ span.yellow {
 
 
 .wheel {
-  /* Keep your existing positioning */
-  position: absolute;
-  right: 10%;
-  top: 145%;
+	position: relative;
+	top: 50%;
   transform: translateY(-50%);
   width: 550px;
   height: 550px;
@@ -370,33 +367,84 @@ span.yellow {
   align-items: center;
   flex-direction: column;
   background-color: #242933;
-	box-shadow: 0 0 10px #242933;
+  box-shadow: 0 0 10px #242933;
+  padding: 20px;
 }
 
 .wheel .skills {
   font-size: 28px;
   color: #b48ead;
   text-align: center;
-  width: 100%;
-  margin-bottom: 20px; /* Adjusted spacing */
-  line-height: 1.4; /* Improves line spacing for better balance */
-	text-shadow: 0 0 20px #b48ead;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  text-shadow: 0 0 20px #b48ead;
 }
 
 .wheel .desc {
   font-size: 20px;
-  color: #ffffff;
   text-align: center;
-  width: 100%;
-  margin: 5px 0; /* Minimal vertical margin */
-  padding: 10px; /* Fine-tuned padding */
-  line-height: 1.5; /* Keep consistent line spacing */
+  margin: 10px 0;
+  padding: 0 40px;
+  line-height: 1.5;
+  max-width: 80%;
+}
+
+.wheel .languages {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .wheel img {
   width: 70px;
   height: 70px;
-  margin: 10px; /* Balanced spacing around logos */
+  margin: 10px;
+}
+
+/* Only modified media queries and problematic areas while keeping original design */
+
+@media screen and (max-width: 1795px) {
+	.aboutme {
+		transform: translateX(-300%);
+	}
+	.box {
+		gap: 150px;
+	}
+}
+
+@media screen and (max-width: 1650px) {
+	.aboutme {
+		transform: translateX(-200%);
+	}
+	.box {
+		gap: 50px;
+	}  
+	.splash {
+		gap: 20%;
+		align-items: center;
+		justify-items: center;
+		flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1545px) {
+	.aboutme {
+		transform: translateX(-150%);
+	}
+	.box {
+		gap: 0px;
+	}
+}
+
+@media screen and (max-width: 1495px) {
+	.aboutme {
+		transform: none;
+	}
+
+	.wheel {
+		top: 30%;
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -425,9 +473,15 @@ span.yellow {
     position: relative;
     right: auto;
     top: auto;
+    transform: none;
+    width: 450px;
+    height: 450px;
     margin: 40px auto;
-    width: 400px;
-    height: 400px;
+  }
+  
+  .wheel .desc {
+    font-size: 18px;
+    padding: 0 30px;
   }
 
   #About {
@@ -452,15 +506,9 @@ span.yellow {
 }
 
 @media screen and (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  #Home {
-    margin-top: 120px;
-    margin-bottom: 40px;
-    height: auto;
-  }
+	.topnav {
+		padding: 0 10%;
+		}
 
   .topleft {
     padding-left: 5%;
@@ -476,15 +524,14 @@ span.yellow {
     width: 90%;
     max-width: 350px;
     height: auto;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
+    min-height: 450px;
   }
 
   .splash-middle {
     font-size: 16px;
     padding: 0 15px;
     width: 100%;
-    text-align: center;
+    overflow-x: auto;
   }
 
   .splash-right {
@@ -493,106 +540,121 @@ span.yellow {
     margin-top: 20px;
   }
 
-  .wheel {
-    width: 300px;
-    height: 300px;
-    margin: 60px auto;
-  }
+	.info {
+		height: 700px;
+	}
 
-  .wheel .skills {
-    font-size: 24px;
-  }
+}
 
-  .wheel .desc {
-    font-size: 16px;
-    padding: 5px;
-  }
-
-  .wheel img {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-  }
-
-  .info {
-    padding: 20px;
-    font-size: 16px;
-    margin-top: 60px;
-  }
+@media screen and (max-width: 560px) {
+	.topnav {
+		padding: 0 5%;
+		}
+	.info {
+		height: 800px;
+	}
 }
 
 @media screen and (max-width: 480px) {
-  header {
-    position: fixed;
-    background-color: #2e3440;
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+	.topnav {
+		padding: 0;
+	}
 
   .topleft, .topright {
     position: relative;
-    width: 100%;
-    text-align: center;
     padding: 10px 5%;
     top: 0;
   }
 
   .topright {
-    margin-top: 50px;
+    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 15px;
-    flex-wrap: wrap;
   }
 
   #Home {
-    margin-top: 180px;
-  }
-
-  .title {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  .splash {
-    gap: 30px;
+    margin-top: 120px;
   }
 
   .splash-left {
+    padding: 20px;
+  }
+
+  .splash-left .email,
+  .splash-left .location,
+  .splash-left .work,
+  .splash-left .github {
+    margin-left: 15px;
+    font-size: 16px;
+  }
+	
+  .wheel {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 500px;
+    height: 500px;
+    margin: 40px auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topleft {
+    font-size: 18px;
+    padding-left: 5%;
+  }
+
+  .topright {
+    font-size: 14px;
+    padding-right: 5%;
+    gap: 10px;
+  }
+
+  .splash-left {
+    max-width: 280px;
     border-radius: 40px 0 40px 0;
-    margin-bottom: 0;
+    padding: 15px;
+  }
+
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .splash-left samp.name {
+    font-size: 24px;
+  }
+
+  .splash-left samp.description {
+    font-size: 16px;
+  }
+
+  .splash-left .email,
+  .splash-left .location,
+  .splash-left .work,
+  .splash-left .github {
+    font-size: 14px;
+    margin-left: 10px;
   }
 
   .splash-middle {
-    margin: 20px 0;
+    font-size: 14px;
+    padding: 0 10px;
   }
 
   .splash-right {
-    margin-bottom: 40px;
+    max-width: 250px;
+    padding: 15px;
+    margin-top: 10px;
   }
 
-  .wheel {
-    width: 250px;
-    height: 250px;
-    margin: 40px auto;
+  .splash-right samp {
+    font-size: 16px;
   }
 
-  .wheel .skills {
-    font-size: 20px;
-  }
-
-  .wheel img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .aboutme {
-    width: 140px;
-    font-size: 20px;
-    margin: 40px auto;
-  }
-
-  .info {
-    margin-top: 40px;
+  .splash-right b {
+    font-size: 24px;
   }
 }
