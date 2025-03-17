@@ -162,13 +162,26 @@ a {
   transition: all 0.3s ease;
 }
 
+.splash-left .KOFI{
+  display: flex; /* Flexbox ensures items are aligned on the same line */
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 8px; /* Adds space between the icon and text */
+  width: 100%; /* Optional: ensures the container takes full width */
+	margin-left: 25px;
+	margin-bottom: 8px;
+	line-height: 1.25rem;
+	font-size: 18px;
+  transition: all 0.3s ease;
+}
+
 .splash-left .location,
 .splash-left .work {
   color: #d8dee9; /* Change color on hover */
 }
 
 .splash-left .email:hover,
-.splash-left .github:hover {
+.splash-left .github:hover,
+.splash-left .KOFI:hover {
   color: #81a1c1;
 	text-shadow: 0 0 30px #81a1c1, 0 0 45px #81a1c1;
   transform: translateX(5px);
