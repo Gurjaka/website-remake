@@ -7,7 +7,11 @@ html {
 body {
   font-family: "JetBrains Mono";
   font-weight: medium;
-  background-color: #2e3440;
+  /* background-color: #2e3440; */
+	background-image:url('../assets/backgrounds/blue_swirl.png');
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: center;
 }
 
 #Home {
@@ -205,6 +209,7 @@ p {
 	padding: 10px;
 	gap: 10px;
 	font-size: 20px;
+	background-color: #1a1e23;
 }
 
 .splash-middle .python {
@@ -284,7 +289,7 @@ span.output {
 }
 
 #About {
-	background-image: url('../assets/backgrounds/mono-inspiration.png');
+	background-image: url('../assets/backgrounds/blue_swirl.png');
 	background-size: cover;
 	background-position: center;
   display: flex;
